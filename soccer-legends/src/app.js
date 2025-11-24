@@ -34,8 +34,8 @@ app.use((err, req, res, next) => {
 // iniciar o servidor e sincronizar banco
 db.sequelize.sync()
   .then(() => {
-    console.log('Banco sincronizado!');
+    console.log('Banco sincronizado com sucesso ✔️');
   })
-  .catch((err) => console.error('Erro ao sincronizar banco:', err));
+  .catch((err) => console.error('⚠️ Erro ao sincronizar banco:', err));
 
 module.exports = app;
