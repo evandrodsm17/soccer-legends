@@ -1,0 +1,14 @@
+node_modules/
+.env
+.DS_Store
+
+# sqlite (se estiver usando)
+*.sqlite
+*.sqlite3
+*.db
+
+# logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+logs/
