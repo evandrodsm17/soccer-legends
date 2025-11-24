@@ -22,6 +22,12 @@ module.exports = (sequelize, DataTypes) => {
         validate: { isEmail: true },
       },
 
+      ativo:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+        allowNull: false,
+      },
+
       senha: {
         type: DataTypes.VIRTUAL,
         // Sugestão: Adicionar um setter para garantir que a senha seja salva no objeto

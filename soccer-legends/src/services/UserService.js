@@ -62,4 +62,13 @@ module.exports = {
     };
   },
 
+  async getUserProfile(userId) {
+    const user = await Usuario.findByPk(userId);
+    if (!user) {
+      throw new Error("Usuário não encontrado");
+    }
+    const userData = user.get({ plain: true });
+    const { senhaCriptografada, ...userSafe } = userData;
+    return userSafe;
+  }
 };
